@@ -1,0 +1,1021 @@
+/*=========================================
+  Colors
+=========================================== */
+/* draks and lights */
+@dark1: #333D47;
+@light1: #ffffff;
+@dark2: #666666;
+@light2 : #dddddd;
+
+/* accents */
+@accent1: #7c606b;
+@accent2: #c46bae;
+@accent3: #eb7bc0;
+@accent4: #eda4bd;
+@accent5: #c8e3df;
+@accent6: #764DD0;
+@accent7: #764DD0;
+
+/*=========================================
+  CSS Reset & Normalize
+=========================================== */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, bbbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { border: 0; font-size: 100%; font: inherit; vertical-align: baseline; margin: 0; padding: 0 } 
+
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary { 
+display: block;
+} 
+body {
+  line-height: 1;
+  font-family: arial;
+}
+
+.reveal section{
+  font-size:24px; 
+}
+
+blockquote,
+q {
+  quotes: none
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden],
+template {
+  display: none;
+}
+
+
+ul {
+  list-style: square;
+  text-indent: inherit;
+}
+
+ol {
+  list-style: decimal;
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+a {
+  background-color: transparent;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+sup,
+sub {
+  font-size: 0.75em;
+  line-height: 2.2em;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  bottom: 1ex;
+}
+
+sub {
+  top: 0.5ex;
+}
+
+small {
+  font-size: 0.75em;
+  line-height: 1.72;
+}
+
+big {
+  font-size: 1.25em;
+}
+
+hr {
+  border: none;
+  clear: both;
+  display: block;
+  height: 1px;
+  width: 100%;
+  text-align: center;
+  margin: 3.2rem auto;
+}
+h2 + hr, h3 + hr {margin-bottom: 4.8rem;
+}
+p + hr {margin-bottom: 4rem;
+}
+
+
+.reveal section > ol,.reveal  section> ul,.reveal .wrap > ol,.reveal  .wrap> ul {
+  margin:0px 0px 0px 70px ;
+  font-size:3 rem;
+}
+
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+
+bbbr,
+acronym {
+  cursor: help;
+}
+
+mark,
+ins {
+  text-decoration: none;
+  padding: 0 4px;
+  text-shadow: none;
+  
+}
+
+::-moz-selection {
+  text-shadow: none;
+}
+
+::-webkit-selection {
+  text-shadow: none;
+}
+
+::selection {
+  text-shadow: none;
+}
+
+img {
+  /* Make sure images are scaled correctly. */
+  border: 0;
+  height: auto;
+  max-width: 100%;
+}
+
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  position: relative;
+  margin: 0;
+  line-height: 0;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+table {
+  width: 96%;
+  margin-left:2%!important;//modAP
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 24px;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+}
+
+blockquote,
+q {
+  quotes: "" "";
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0;
+}
+
+
+/*=== Clearing === */
+.clear:before, .clear:after, header:before, header:after, main:before, main:after, .wrap:before, .wrap:after, group:before, group:after, section:before, section:after, aside:before, aside:after,footer:before, footer:after{ content: ""; display: table; } 
+.clear:after, header:after, main:after, .wrap:after, group:after, section:after, aside:after, footer:after { clear: both; }
+	
+/*=========================================
+  Basic Grid
+=========================================== */
+
+.grid {
+  margin-right: auto;
+  margin-left: auto;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  clear: both;
+}
+
+.grid:before {
+  content: "";
+  display: table;
+}
+
+.grid:after {
+  clear: both;
+}
+
+.grid > .column {
+  position: relative;
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  flex: auto;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-transition: .3s;
+  transition: .3s;   
+  padding: 2.4rem;
+}
+
+.grid.vertical-align .column {
+  justify-content: center;
+}
+
+
+  .grid > .column {
+    width: 25%;
+  }
+  /* Grid (Sidebar + Main) .grid.sm */
+  .grid.sm .column:nth-child(1) {
+   width: 30%
+  }
+  .grid.sm .column:nth-child(2) {
+   width: 70%;
+  }
+  /* Grid (Main + Sidebar) .grid.ms */
+  .grid.ms .column:nth-child(1) {
+   width: 70%
+  }
+  .grid.ms .column:nth-child(2) {
+   width: 30%;
+  }
+   /* Grid (Sidebar + Main + Sidebar) .grid.sms */
+  .grid.sms .column:nth-child(2) {
+   width: 50%;
+  }
+  
+.reveal  .grid{
+  flex-grow: 1;
+}
+
+/* Lists and misc */
+.reveal li{
+  list-style-position : inside;
+}
+
+.reveal ul > li, .reveal ol > li {
+    margin-left: 20px;
+}
+
+/*=========================================
+  Headers
+=========================================== */
+  .reveal h1,  .reveal h2,  .reveal h3 , .reveal h4,  .reveal h5,  .reveal h6{
+	  text-align: center;
+  }
+  .reveal  h1 {
+    font-size: 48px;
+    font-weight:bold;
+  }
+  .reveal h2 {
+    font-size: 32px;
+    font-weight:bold;
+  }
+ .reveal  h3 {
+    font-size: 24px;
+  }
+  .reveal h4 {
+    font-size: 22px;
+  }
+
+
+/*=========================================
+  highlight.js
+=========================================== */
+.hljs {
+  color: @dark1;
+  background: @light1;
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+}
+
+.hljs-number,
+.hljs-literal,
+.hljs-symbol,
+.hljs-bullet {
+  color: @accent1;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-deletion {
+  color: @accent2;
+}
+
+.hljs-variable,
+.hljs-template-variable,
+.hljs-link {
+  color: @accent3;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: @accent4;
+}
+
+.hljs-meta {
+  color: @accent5;
+}
+
+.hljs-string,
+.hljs-attribute,
+.hljs-addition {
+  color: @accent1;
+}
+
+.hljs-section,
+.hljs-title,
+.hljs-type {
+  color: @accent2;
+}
+
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: @accent3;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.reveal pre code {
+  display: block;
+  background: @light1;
+  color: @dark2;
+  font-family: Menlo, Monaco, Consolas, monospace;
+  line-height: 1.5;
+  border: 1px solid @light2;
+  padding: 10px;
+}
+pre .xml .tag .title {
+  color: @dark2;
+}
+pre .html .tag .title {
+  color: @dark2;
+}
+
+/*=========================================
+  C3.js graphs
+=========================================== */
+
+.reveal .c3{
+  flex-grow:1;
+}
+
+.c3 .domain{
+  fill:none;
+}
+
+.c3  {
+  font: 18px sans-serif;
+  -webkit-tap-highlight-color: transparent; }
+
+.c3 path, .c3 line {
+  fill: none;
+  stroke: @dark2; }
+
+.c3 text {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none; }
+
+.c3-legend-item-tile,
+.c3-xgrid-focus,
+.c3-ygrid,
+.c3-event-rect,
+.c3-bars path {
+  shape-rendering: crispEdges; }
+
+.c3-chart-arc path {
+  stroke: #fff; }
+
+.c3-chart-arc text {
+  fill: @light1;
+  font-size: 18px; }
+
+/*-- Axis --*/
+/*-- Grid --*/
+.c3-grid line {
+  stroke: #aaa; }
+
+.c3-grid text {
+  fill: #aaa; }
+
+.c3-xgrid, .c3-ygrid {
+  stroke-dasharray: 3 3; }
+
+/*-- Text on Chart --*/
+.c3-text.c3-empty {
+  fill: #808080;
+  font-size: 2em; }
+
+/*-- Line --*/
+.c3-line {
+  stroke-width: 1px; }
+
+/*-- Point --*/
+.c3-circle{
+  stroke-width: 6px;
+  /*stroke: #F00;*/
+}
+
+
+.c3-circle._expanded_ {
+  stroke-width: 1px;
+  stroke: @light1; }
+
+.c3-selected-circle {
+  fill: @light1;
+  stroke-width: 2px; }
+
+/*-- Bar --*/
+.c3-bar {
+  stroke-width: 0; }
+
+.c3-bar._expanded_ {
+  fill-opacity: 0.75; }
+
+/*-- Focus --*/
+.c3-target.c3-focused {
+  opacity: 1; }
+
+.c3-target.c3-focused path.c3-line, .c3-target.c3-focused path.c3-step {
+  stroke-width: 2px; }
+
+.c3-target.c3-defocused {
+  opacity: 0.3 !important; }
+
+/*-- Region --*/
+.c3-region {
+  fill: steelblue;
+  fill-opacity: .1; }
+
+/*-- Brush --*/
+.c3-brush .extent {
+  fill-opacity: .1; }
+
+/*-- Select - Drag --*/
+/*-- Legend --*/
+.c3-legend-item {
+  font-size: 18px; }
+
+.c3-legend-item-hidden {
+  opacity: 0.15; }
+
+.c3-legend-background {
+  opacity: 0.75;
+  fill: @light1;
+  stroke: lightgray;
+  stroke-width: 1; }
+
+/*-- Title --*/
+.c3-title {
+  font: 18px sans-serif; }
+
+/*-- Tooltip --*/
+.c3-tooltip-container {
+  z-index: 10; }
+
+.c3-tooltip {
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: @light1;
+  empty-cells: show;
+  -webkit-box-shadow: 7px 7px 12px -9px #777777;
+  -moz-box-shadow: 7px 7px 12px -9px #777777;
+  box-shadow: 7px 7px 12px -9px #777777;
+  opacity: 0.9; }
+
+.c3-tooltip tr {
+  border: 1px solid #CCC; }
+
+.c3-tooltip th {
+  background-color: #aaa;
+  font-size: 14px;
+  padding: 2px 5px;
+  text-align: left;
+  color: @light1; }
+
+.c3-tooltip td {
+  font-size: 13px;
+  padding: 3px 6px;
+  background-color: @light1;
+  border-left: 1px dotted #999; }
+
+.c3-tooltip td > span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 6px; }
+
+.c3-tooltip td.value {
+  text-align: right; }
+
+/*-- Area --*/
+.c3-area {
+  stroke-width: 0;
+  opacity: 0.2; }
+
+/*-- Arc --*/
+.c3-chart-arcs-title {
+  dominant-baseline: middle;
+  font-size: 1.3em; }
+
+.c3-chart-arcs .c3-chart-arcs-background {
+  fill: #e0e0e0;
+  stroke: none; }
+
+.c3-chart-arcs .c3-chart-arcs-gauge-unit {
+  fill: @dark1;
+  font-size: 18px; }
+
+.c3-chart-arcs .c3-chart-arcs-gauge-max {
+  fill: #777; }
+
+.c3-chart-arcs .c3-chart-arcs-gauge-min {
+  fill: #777; }
+
+.c3-chart-arc .c3-gauge-value {
+  fill: @dark1;
+  /*  font-size: 28px !important;*/ }
+
+
+
+.c3 svg {
+  font: 18px sans-serif;
+}
+.c3 path, .c3 line {
+  fill: none;
+  stroke: @dark1;
+}
+.c3 text {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.c3-legend-item-tile,
+.c3-xgrid-focus,
+.c3-ygrid,
+.c3-event-rect,
+.c3-bars path {
+  shape-rendering: crispEdges;
+}
+
+.c3-chart-arc path {
+  stroke: #fff;
+
+}
+.c3-chart-arc text {
+  fill: #fff;
+  font-size: 18px;
+}
+
+/*-- Axis --*/
+
+.c3-axis-x .tick {
+  fill: @dark2;
+}
+.c3-axis-x-label {
+  fill: @dark2;
+}
+
+.c3-axis-y .tick {
+  fill: @dark2;
+}
+.c3-axis-y-label {
+  fill: @dark2;
+}
+
+.c3-axis-y2 .tick {
+  fill: @dark2;
+}
+.c3-axis-y2-label {
+  fill: @dark2;
+}
+
+/*-- Grid --*/
+
+.c3-grid line {
+  stroke: #aaa;
+}
+.c3-grid text {
+  fill: #aaa;
+}
+.c3-xgrid, .c3-ygrid {
+  stroke-dasharray: 3 3;
+}
+.c3-xgrid-focus {
+}
+
+/*-- Text on Chart --*/
+
+.c3-text {
+}
+
+.c3-text.c3-empty {
+  fill: #808080;
+  font-size: 2em;
+}
+
+/*-- Line --*/
+
+.c3-line {
+  stroke-width: 3px;
+}
+/*-- Point --*/
+
+.c3-circle._expanded_ {
+  stroke-width: 3px;
+  stroke: white;
+}
+.c3-selected-circle {
+  fill: white;
+  stroke-width: 9px;
+}
+
+/*-- Bar --*/
+
+.c3-bar {
+  stroke-width: 0;
+}
+.c3-bar._expanded_ {
+  fill-opacity: 0.75;
+}
+
+/*-- Arc --*/
+
+.c3-chart-arcs-title {
+  font-size: 1.3em;
+}
+
+/*-- Focus --*/
+
+.c3-target.c3-focused {
+  opacity: 1;
+}
+.c3-target.c3-focused path.c3-line, .c3-target.c3-focused path.c3-step {
+  stroke-width: 2px;
+}
+.c3-target.c3-defocused {
+  opacity: 0.3 !important;
+}
+
+
+/*-- Region --*/
+
+.c3-region {
+  fill: steelblue;
+  fill-opacity: .1;
+}
+
+/*-- Brush --*/
+
+.c3-brush .extent {
+  fill-opacity: .1;
+}
+
+/*-- Select - Drag --*/
+
+.c3-dragarea {
+}
+
+/*-- Legend --*/
+
+.c3-legend-item {
+  font-size: 16px;
+}
+.c3-legend-item-hidden {
+  opacity: 0.15;
+}
+
+.c3-legend-background {
+  opacity: 0.75;
+  fill: white;
+  stroke: lightgray;
+  stroke-width: 1
+}
+
+/*-- Tooltip --*/
+
+.c3-tooltip-container {
+  z-index: 10;
+}
+.c3-tooltip {
+  border-collapse:collapse;
+  border-spacing:0;
+  background-color:@light1;
+  empty-cells:show;
+  opacity: 0.9;
+}
+.c3-tooltip tr {
+  border:1px solid #CCC;
+}
+.c3-tooltip th {
+  background-color: #aaa;
+  font-size:14px;
+  padding:2px 5px;
+  text-align:left;
+  color:@light1;
+}
+.c3-tooltip td {
+  font-size:13px;
+  padding: 3px 6px;
+  background-color:@light1;
+  border-left:1px dotted #999;
+}
+.c3-tooltip td > span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 6px;
+}
+.c3-tooltip td.value{
+  text-align: right;
+}
+
+.c3-area {
+  stroke-width: 0;
+  opacity: 0.2;
+}
+
+.c3-chart-arcs .c3-chart-arcs-background {
+  fill: #e0e0e0;
+  stroke: none;
+}
+.c3-chart-arcs .c3-chart-arcs-gauge-unit {
+  fill: @dark1;
+  font-size: 16px;
+}
+.c3-chart-arcs .c3-chart-arcs-gauge-max {
+  fill: #777;
+}
+.c3-chart-arcs .c3-chart-arcs-gauge-min {
+  fill: #777;
+}
+
+.c3-chart-arc .c3-gauge-value {
+  fill: @dark1;
+/*  font-size: 28px !important;*/
+}
+
+.domain, .tick line{
+ stroke: @dark2 !important;
+}
+
+// customs colors */
+
+.c3-chart-arc-0 path, .bar-0 path, .c3circle-0 circle, .c3area-0 path{
+	fill: @accent1!important;
+}
+  
+.c3-chart-arc-1 path, .bar-1 path, .c3circle-1 circle, .c3area-1 path{
+	fill: @accent2!important;
+}
+.c3-chart-arc-2 path , .bar-2 path, .c3circle-2 circle, .c3area-2 path{
+	fill: @accent3!important;
+}    
+    
+.c3-chart-arc-3 path , .bar-3 path, .c3circle-3 circle, .c3area-3 path{
+	fill: @accent4!important;
+}  
+
+.c3-chart-arc-4 path , .bar-4 path, .c3circle-4 circle, .c3area-4 path{
+	fill: @accent5!important;
+}  
+
+.c3-chart-arc-5 path , .bar-5 path, .c3circle-5 circle, .c3area-5 path{
+	fill: @accent6!important;
+}  
+
+.c3-chart-arc-6 path , .bar-6 path, .c3circle-6 circle, .c3area-6 path{
+	fill: @accent7!important;
+}  
+
+.legend-0, .line-0 path{
+	stroke: @accent1!important;
+}
+
+.legend-1, .line-1 path{
+	stroke: @accent2!important;
+}
+
+.legend-2, .line-2 path{
+	stroke: @accent3!important;
+}
+
+.legend-3, .line-3 path{
+	stroke: @accent4!important;
+}
+
+.legend-4, .line-4 path{
+	stroke: @accent5!important;
+}
+
+.legend-5, .line-5 path{
+	stroke: @accent6!important;
+}
+
+.legend-6, .line-6 path{
+	stroke: @accent7!important;
+}
+
+/*=========================================
+  Mind map & org chart
+=========================================== */
+/********** org chart   *******/
+.node {
+   cursor:default;
+}
+.node text {
+    font: 14px sans-serif;
+    fill: @light1;
+    font-weight: bold;
+}
+
+.node rect {
+
+}
+
+/* Lines */
+.link {
+  fill: none;
+  stroke: @accent1;
+  stroke-width: 3.5px;
+}
+
+
+.box{
+	stroke :@accent1;
+	stroke-width: 4;
+	fill: @accent1;
+}
+/************  mind mapping  ***********/
+.level0 rect {
+        cursor: pointer;
+        fill: @accent1;
+        stroke: @accent1;
+        stroke-width: 2px;
+      }
+
+      .level0 text {
+      font: 14px sans-serif;
+            fill: @light1;
+    font-weight: bold;
+      }
+
+
+      .level1 rect {
+        cursor: pointer;
+        fill: @light1;
+        stroke: @accent1;
+        stroke-width: 2px;
+      }
+
+   .level2 rect {
+        cursor: pointer;
+        fill: @light1;
+        stroke: @light1;
+        stroke-width: 2px;
+      }
+      .level1 text, .level2 text {
+      font: 14px sans-serif;
+            fill: @accent1;
+    font-weight: bold;
+      }
+
+      path.link {
+      fill: none;
+      stroke: @accent1;
+      stroke-width: 2px;
+      }
+
+/*=========================================
+  SVG Icons
+=========================================== */
+.reveal .svgicon{
+  width: 80px;
+  height: 80px;
+  fill: none;
+  stroke: @accent1;
+  stroke-width: 2px;
+}
+
+
+
+/*=========================================
+  Master layout
+=========================================== */
+.reveal .backgrounds {
+  background-color:  @light1;
+}
+
+.reveal section{
+    color: @dark1;
+}
+
+.reveal section .bg-dark{
+    color: @light1;
+}
+
+/*=========================================
+  Example of layout
+  this shows how to sepcify both background and content for a layout having the title class
+=========================================== */
+
+
+.reveal .title{
+  justify-content: center;
+  text-align: center;
+  color:#fff;
+  padding:40px!important;
+}
+
+.reveal .title .titleframe{
+  padding: 40px;
+  background-color:rgb(255,114,107);
+}
+
+.reveal .backgrounds .title{
+  background-color: rgb(255,223,223);
+background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23FFAAAA' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
