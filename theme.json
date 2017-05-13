@@ -1,0 +1,34 @@
+{
+    "Name": "SlidiumMinimalTheme",
+    "Version": 0.1,
+    "Author": "Neomobili / You!",
+    "Description": "A starter kit for your own theme",
+    "Template": "Theme: SlidiumMinimalTheme\n---\nLayout: Title\n\n# Title",
+    "Palets": [
+        {
+            "Name": "Default Palet",
+            "Css": "default-palet.css",
+            "Dark1" : "#000000",
+            "Light1" : "#ffffff",
+            "Dark2" : "#666666",
+            "Light2" : "#dddddd",
+            "Accent1" : "#DD3556",
+            "Accent2" : "#E36151",
+            "Accent3" : "#B7ACA1"
+        }
+    ],
+    "Layouts":[
+        {
+           "Name" : "Default",
+           "Group" :"Basic",
+           "Snippet": "# Fidele",
+           "Classes": "titleandcolumns",
+           "Dynamic": false,
+           "DynamicPart" :"",
+           "FixedParts": 1,
+           "Template": "<div class=\"grid\"><div class=\"column\"> {@{content}@}</div></div>",
+           "ThumbnailTemplate": "<div class=\"grid\"><div class=\"column\"> <h1>Title</h1>Content of the slide</div></div>"
+       }
+    ]
+}
+
